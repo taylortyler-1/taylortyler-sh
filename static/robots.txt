@@ -1,3 +1,12 @@
-# allow crawling everything by default
+# Allow search and user-requested browsing by major AI assistants.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
+# Allow all other crawlers, including Google and Bing search.
 User-agent: *
-Disallow:
+Allow: /

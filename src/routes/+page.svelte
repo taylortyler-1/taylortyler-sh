@@ -1,2 +1,45 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { formatDate } from '#lib/date.ts';
+	import type { PageProps } from './$types';
+
+	let { data }: PageProps = $props();
+</script>
+
+<svelte:head>
+	<title>Articles</title>
+</svelte:head>
+
+<main class="mx-auto max-w-2xl px-5 py-16 sm:py-24">
+	<h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">Articles</h1>
+
+	{#if data.posts.length === 0}
+		<p class="mt-8 text-stone-500">Nothing here yet — check back soon.</p>
+	{:else}
+		<ul class="mt-10 divide-y divide-stone-200 dark:divide-stone-800">
+			{#each data.posts as post (post.slug)}
+				<li>
+					<a
+						href="/blog/{post.slug}"
+						class="group -mx-3 block rounded-lg px-3 py-6 transition-colors hover:bg-stone-100 focus-visible:bg-stone-100 dark:hover:bg-stone-900 dark:focus-visible:bg-stone-900"
+					>
+						<p class="text-sm text-stone-500 dark:text-stone-400">
+							<time datetime={post.date}>{formatDate(post.date)}</time>
+							<span aria-hidden="true"> · </span>
+							{post.readingTime} min read
+						</p>
+						<h2
+							class="mt-1 text-xl font-semibold tracking-tight underline-offset-4 group-hover:underline"
+						>
+							{post.title}
+						</h2>
+						{#if post.description}
+							<p class="mt-2 leading-relaxed text-stone-600 dark:text-stone-400">
+								{post.description}
+							</p>
+						{/if}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
+</main>

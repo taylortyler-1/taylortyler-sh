@@ -1,3 +1,14 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	/* System serif stack tuned for long-form reading; no web font download needed. */
+	--font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+}
+
+@layer base {
+	html {
+		@apply bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100;
+	}
+}

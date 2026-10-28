@@ -9,11 +9,11 @@
 	<title>Articles – Taylor Tyler</title>
 </svelte:head>
 
-<main class="mx-auto max-w-2xl px-5 py-16 sm:py-24">
+<main id="main" class="mx-auto max-w-2xl px-5 py-16 sm:py-24">
 	<h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">Articles</h1>
 
 	{#if data.posts.length === 0}
-		<p class="mt-8 text-stone-500">Nothing here yet — check back soon.</p>
+		<p class="mt-8 text-stone-600 dark:text-stone-400">Nothing here yet — check back soon.</p>
 	{:else}
 		<ul class="mt-10 divide-y divide-stone-200 dark:divide-stone-800">
 			{#each data.posts as post (post.slug)}
@@ -22,7 +22,7 @@
 						href="/blog/{post.slug}"
 						class="group -mx-3 block rounded-lg px-3 py-6 transition-colors hover:bg-stone-100 focus-visible:bg-stone-100 dark:hover:bg-stone-900 dark:focus-visible:bg-stone-900"
 					>
-						<p class="text-sm text-stone-500 dark:text-stone-400">
+						<p class="text-sm text-stone-600 dark:text-stone-400">
 							<time datetime={post.date}>{formatDate(post.date)}</time>
 							<span aria-hidden="true"> · </span>
 							{post.readingTime} min read

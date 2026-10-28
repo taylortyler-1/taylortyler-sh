@@ -3,7 +3,7 @@
 	<meta name="description" content="A short bio about Taylor Tyler." />
 </svelte:head>
 
-<main class="mx-auto max-w-2xl px-5 py-16 sm:py-24">
+<main id="main" class="mx-auto max-w-2xl px-5 py-16 sm:py-24">
 	<h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">About</h1>
 
 	<div class="mt-8 space-y-5 font-serif text-lg leading-relaxed text-stone-700 dark:text-stone-300">

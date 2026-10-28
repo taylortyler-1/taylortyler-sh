@@ -1,7 +1,7 @@
 ---
 title: Seeing the Big Problem
 date: 2026-08-25
-description: A first post, and a quick tour of how this blog is put together.
+description: Customer feature requests often describe a workaround, not the real problem. Here's how to look past the request and find what's actually worth solving.
 ---
 
 “I’ve got a great idea. Why don’t you build…”

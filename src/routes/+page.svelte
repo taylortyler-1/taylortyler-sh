@@ -20,7 +20,7 @@
 				<li>
 					<a
 						href="/blog/{post.slug}"
-						class="group -mx-3 block rounded-lg px-3 py-6 transition-colors hover:bg-stone-100 focus-visible:bg-stone-100 dark:hover:bg-stone-900 dark:focus-visible:bg-stone-900"
+						class="group -mx-3 block rounded-lg px-3 py-6 transition-colors duration-300 hover:bg-stone-100/50 focus-visible:bg-stone-100 dark:hover:bg-stone-900/40 dark:focus-visible:bg-stone-900"
 					>
 						<p class="text-sm text-stone-600 dark:text-stone-400">
 							<time datetime={post.date}>{formatDate(post.date)}</time>
@@ -28,7 +28,7 @@
 							{post.readingTime} min read
 						</p>
 						<h2
-							class="mt-1 text-xl font-semibold tracking-tight underline-offset-4 group-hover:underline"
+							class="mt-1 text-xl font-semibold tracking-tight decoration-stone-300 underline-offset-4 group-hover:underline dark:decoration-stone-600"
 						>
 							{post.title}
 						</h2>

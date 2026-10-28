@@ -26,24 +26,26 @@
 	</a>
 
 	<article bind:this={article} class="mt-10">
-		<header class="mb-10">
-			<p class="text-sm text-stone-600 dark:text-stone-400">
+		<header class="mb-12 border-b border-stone-200 pb-10 dark:border-stone-800">
+			<h1 class="text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl">
+				{data.post.title}
+			</h1>
+			{#if data.post.description}
+				<p
+					class="mt-5 text-lg leading-relaxed text-pretty text-stone-600 sm:text-xl dark:text-stone-400"
+				>
+					{data.post.description}
+				</p>
+			{/if}
+			<p class="mt-6 text-sm text-stone-600 dark:text-stone-400">
 				<time datetime={data.post.date}>{formatDate(data.post.date)}</time>
 				<span aria-hidden="true"> · </span>
 				{data.post.readingTime} min read
 			</p>
-			<h1 class="mt-2 text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl">
-				{data.post.title}
-			</h1>
-			{#if data.post.description}
-				<p class="mt-4 text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-					{data.post.description}
-				</p>
-			{/if}
 		</header>
 
 		<div
-			class="prose max-w-none font-serif prose-stone sm:prose-lg dark:prose-invert prose-headings:font-sans prose-headings:tracking-tight prose-a:underline-offset-2 prose-pre:font-mono"
+			class="prose prose-lg max-w-none font-serif prose-stone dark:prose-invert prose-headings:font-sans prose-headings:tracking-tight prose-a:underline-offset-2 prose-pre:font-mono"
 		>
 			<data.content />
 		</div>

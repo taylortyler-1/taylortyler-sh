@@ -17,7 +17,7 @@
 	>Skip to content</a
 >
 
-<header class="mx-auto flex max-w-2xl items-center justify-between px-5 pt-6 text-sm">
+<header class="mx-auto flex max-w-3xl items-center justify-between px-5 pt-6 text-sm">
 	<a href="/" class="font-semibold tracking-tight">Taylor Tyler</a>
 	<nav class="flex gap-5 text-stone-600 dark:text-stone-400">
 		<a

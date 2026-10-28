@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.post.title}</title>
+	<title>{data.post.title} – Taylor Tyler</title>
 	{#if data.post.description}
 		<meta name="description" content={data.post.description} />
 	{/if}

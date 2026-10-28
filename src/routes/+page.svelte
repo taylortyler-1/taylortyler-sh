@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Articles</title>
+	<title>Articles – Taylor Tyler</title>
 </svelte:head>
 
 <main class="mx-auto max-w-2xl px-5 py-16 sm:py-24">

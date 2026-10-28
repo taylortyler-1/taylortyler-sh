@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About</title>
+	<title>About – Taylor Tyler</title>
 	<meta name="description" content="A short bio about Taylor Tyler." />
 </svelte:head>
 
